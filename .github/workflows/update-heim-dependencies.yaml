@@ -1,0 +1,29 @@
+name: Update Helm Dependencies
+
+on:
+  push:
+    paths:
+      - 'root_app/requirements.yaml'
+
+jobs:
+  update-helm-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Helm
+      uses: azure/setup-helm@v3
+
+    - name: Update dependencies
+      run: |
+        helm dependency update charts/root-app
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add charts/root-app/Chart.lock
+        git commit -m "Update Helm dependencies"
+        git push

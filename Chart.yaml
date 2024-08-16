@@ -1,0 +1,10 @@
+apiVersion: v2
+name: cluster-root-deployment
+description: A Helm chart for managing root ArgoCD applications
+version: 0.1.0
+
+dependencies:
+  - name: prometheus
+    version: 0.1.0
+    condition: prometheus.enabled
+

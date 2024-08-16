@@ -1,0 +1,7 @@
+
+global:
+  argocdNamespace: argocd
+
+rootApp:
+  name: root-app
+  namespace: default

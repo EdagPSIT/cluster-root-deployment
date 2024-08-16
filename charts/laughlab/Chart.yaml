@@ -1,0 +1,8 @@
+apiVersion: v2
+name: laughlab
+description: Helm chart for laughlab a jokes website.
+version: 0.0.0
+dependencies:
+- name: laughlab
+  version: ~0
+  repository: "file://../../dependencies/common-application"

@@ -4,7 +4,10 @@ description: A Helm chart for managing root ArgoCD applications
 version: 0.1.0
 
 dependencies:
+  - name: laughlab
+    version: 0.1.0
+    repository: "file://charts/laughlab"
   - name: prometheus
     version: 0.1.0
-    condition: prometheus.enabled
+    repository: "file://charts/prometheus"
 

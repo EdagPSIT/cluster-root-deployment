@@ -1,0 +1,8 @@
+apiVersion: v2
+name: prometheus
+description: Helm chart for monitoring
+version: 0.0.0
+dependencies:
+- name: prometheus
+  version: ~0
+  repository: "file://../../dependencies/common-application"

@@ -1,0 +1,8 @@
+apiVersion: v2
+name: argocd
+description: Helm chart for argocd
+version: 0.0.0
+dependencies:
+- name: argocd
+  version: ~0
+  repository: "file://../../dependencies/common-application"
